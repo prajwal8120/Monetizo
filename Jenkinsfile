@@ -5,8 +5,8 @@ pipeline {
     }
 
     stages {
-        stage ("Source Code Check In") {
-            step {
+        stage ("Source Code Check Out") {
+            steps {
             git 'https://github.com/prajwal8120/Monetizo.git'
             echo "scr code fetched"
             }
