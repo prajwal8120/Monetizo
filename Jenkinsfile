@@ -59,7 +59,7 @@ pipeline {
             //attachLog: true
         //}
     //}
-        post {
+        post1 {
             always{
                 //archiveArtifacts artifacts: '*.war', onlyIfSuccessful: true
                 
