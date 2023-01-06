@@ -42,5 +42,12 @@ pipeline {
                 echo "Pushed Image Successfully"
             }
         }
+
+        stage ("Execute playbook in aws_server") {
+            steps {
+                ansiblePlaybook credentialsId: 'aws_server', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inv.inv', playbook: 'deployment_aws-server.yml'
+                echo "Playbook Executed Successfully"
+            }
+        }
     }
 }
