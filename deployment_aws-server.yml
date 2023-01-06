@@ -17,3 +17,6 @@
 
   - name: Install docker.io
     command: yum install docker -y
+
+  - name: Docker pull image
+    command: docker pull insta7120/monetizo_image:v1.0
