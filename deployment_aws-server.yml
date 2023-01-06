@@ -16,4 +16,4 @@
     command: pip install docker-py
 
   - name: Install docker.io
-    command: yum install docker.io -y
+    command: yum install docker -y
