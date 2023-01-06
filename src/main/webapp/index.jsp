@@ -10,7 +10,7 @@
     <input type="submit" value="Submit">
   </form> 
 <!--<body style="background-image: url('image2.jpg');">-->
-<body style="background-image: url('image2.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: center;"> 
+<body style="background-image: url('image3.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: center;"> 
 <h2 stype="colour: Green">Submitted by Prajwal Aradhya S</h2>
 <h1 stype="colour: Green">Thank You!!!</h1>
 </body>
