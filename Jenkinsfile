@@ -49,5 +49,11 @@ pipeline {
                 echo "Playbook Executed Successfully"
             }
         }
+
+        post {
+        always {
+            emailext body: 'A Test EMail', recipientProviders: [[$class: 'prajwal8120@gmail.com'], [$class: 'prajwal8120@gmail.com']], subject: 'Test'
+            }
+        }
     }
 }
