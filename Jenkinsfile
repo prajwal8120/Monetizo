@@ -11,5 +11,12 @@ pipeline {
             echo "scr code fetched"
             }
         }
+
+        stage ("Build Package") {
+            steps {
+                sh 'mvn clean compile'
+                echo "Package Done!!"
+            }
+        }
     }
 }
