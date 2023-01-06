@@ -75,6 +75,6 @@ pipeline {
                 //subject: "jenkins build:${currentBuild.currentResult}: ${env.JOB_NAME}",
                 //body: "${currentBuild.currentResult}: Job ${env.JOB_NAME}: ${env.BUILD_ID}\nMore Info can be found here: ${env.BUILD_URL}",
                 //attachmentsPattern: '*.csv'
-            }
+        
     }
 }
