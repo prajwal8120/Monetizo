@@ -69,7 +69,7 @@ pipeline {
                 //attachmentsPattern: '*.csv'
                 
             //cleanWs()
-            }
+            
             failure{
                 emailext to: "prajwal8120@gmail.com",
                 subject: "jenkins build:${currentBuild.currentResult}: ${env.JOB_NAME}",
@@ -78,4 +78,5 @@ pipeline {
             }
         }
         
+}
 }
