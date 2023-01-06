@@ -51,14 +51,6 @@ pipeline {
         }
     }
 
-        //post{
-        //always{
-            //emailext to: "prajwal8120@gmail.com", "insta7120@gmail.com"
-            //subject: "Test Email",
-            //body: "Test",
-            //attachLog: true
-        //}
-    //}
         post {
             always{
                 //archiveArtifacts artifacts: '*.war', onlyIfSuccessful: true
@@ -66,14 +58,6 @@ pipeline {
                 emailext to: "prajwal8120@gmail.com",
                 subject: "jenkins build:${currentBuild.currentResult}: ${env.JOB_NAME}",
                 body: "${currentBuild.currentResult}: Job ${env.JOB_NAME}: ${env.BUILD_ID}\nMore Info can be found here: ${env.BUILD_URL}",
-                //attachmentsPattern: '*.csv'
-                
-            //cleanWs()
-            
-            //failure{
-                //emailext to: "prajwal8120@gmail.com",
-                //subject: "jenkins build:${currentBuild.currentResult}: ${env.JOB_NAME}",
-                //body: "${currentBuild.currentResult}: Job ${env.JOB_NAME}: ${env.BUILD_ID}\nMore Info can be found here: ${env.BUILD_URL}",
-                //attachmentsPattern: '*.csv'
-        
+            }           
+}
 }
