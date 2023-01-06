@@ -1,0 +1,19 @@
+---
+- hosts: aws_server
+  user: ec2-user
+  become: true
+  tasks:
+  - name: Update pkg repo
+    command: yum update
+
+  - name: Install python3
+    command: yum install python3 -y
+
+  - name: Install pip
+    command: yum install pip -y
+
+  - name: Install pip docker
+    command: pip install docker -y
+
+  - name: Install docker.io
+    command: yum install docker.io -y
