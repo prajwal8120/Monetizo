@@ -14,7 +14,7 @@ pipeline {
 
         stage ("Build Package") {
             steps {
-                sh 'mvn clean compile'
+                sh 'mvn clean package'
                 echo "Package Done!!"
             }
         }
