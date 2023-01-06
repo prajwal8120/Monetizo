@@ -23,6 +23,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordVariable: 'Registry_passwd', usernameVariable: 'Registry_username')]) {
                 sh 'docker login -u $Registry_username -p $Registry_passwd'
+                echo "Docker Login Successfully"
                 }
             }
         }
@@ -30,12 +31,14 @@ pipeline {
         stage ("Docker Build Image") {
             steps {
                 sh 'docker build -t insta7120/monetizo_image:v1.0 .'
+                echo "Built Image Successfully"
             }
         }
 
         stage ("Push the docker image to the Docker Hub") {
             steps {
                 sh 'docker push insta7120/monetizo_image:v1.0'
+                echo "Pushed Image Successfully"
             }
         }
     }
