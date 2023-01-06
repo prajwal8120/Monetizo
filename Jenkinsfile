@@ -32,5 +32,11 @@ pipeline {
                 sh 'docker build -t insta7120/monetizo_image:v1.0 .'
             }
         }
+
+        stage ("Push the docker image to the Docker Hub") {
+            steps {
+                sh 'docker push insta7120/monetizo_image:v1.0'
+            }
+        }
     }
 }
