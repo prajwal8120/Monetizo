@@ -13,7 +13,7 @@
     command: yum install pip
 
   - name: Install pip docker
-    command: pip install docker -y
+    command: pip install docker
 
   - name: Install docker.io
     command: yum install docker.io -y
