@@ -6,8 +6,8 @@
   - name: Update pkg repo
     command: yum update
 
-  - name: Install python3
-    command: yum install python3 -y
+  - name: Install python
+    command: yum install python -y
 
   - name: Install pip
     command: yum install pip
