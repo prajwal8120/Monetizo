@@ -10,7 +10,7 @@
     command: yum install python3 -y
 
   - name: Install pip
-    command: yum install pip -y
+    command: yum install pip
 
   - name: Install pip docker
     command: pip install docker -y
