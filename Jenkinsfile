@@ -63,7 +63,8 @@ pipeline {
                 
             //cleanWs()
             }
-
+        }
+            post {
             failure{
                 //archiveArtifacts artifacts: '*.csv', onlyIfSuccessful: true
                 
