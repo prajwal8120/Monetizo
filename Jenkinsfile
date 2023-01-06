@@ -29,7 +29,7 @@ pipeline {
 
         stage ("Docker Build Image") {
             steps {
-                sh 'docker build -t Monetizo_image:v1.0 .'
+                sh 'docker build -t insta7120/monetizo_image:v1.0 .'
             }
         }
     }
