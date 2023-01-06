@@ -59,7 +59,7 @@ pipeline {
                 subject: "jenkins build:${currentBuild.currentResult}: ${env.JOB_NAME}",
                 body: "${currentBuild.currentResult}: Job ${env.JOB_NAME}: Build_No. #${env.BUILD_ID}\nMore Info can be found here: ${env.BUILD_URL}",
                 attachLog: true
-                attachmentsPattern: '*.csv'
+                //attachmentsPattern: '*.csv'
                 
             //cleanWs()
             }
