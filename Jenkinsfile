@@ -31,6 +31,7 @@ pipeline {
         stage ("Docker Build Image") {
             steps {
                 sh 'docker build -t insta7120/monetizo_image:v1.0 .'
+                sh 'docker rmi $(docker images -f "dangling=true" -q)'
                 echo "Built Image Successfully"
             }
         }
