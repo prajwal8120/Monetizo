@@ -3,20 +3,24 @@
   user: ec2-user
   become: true
   tasks:
-  - name: Update pkg repo
-    command: yum update
+ 
+ # - name: Update pkg repo
+ #    command: yum update
 
-  - name: Install python
-    command: yum install python -y
+ #  - name: Install python
+ #    command: yum install python -y
 
-  - name: Install pip
-    command: yum install pip
+ #  - name: Install pip
+ #    command: yum install pip
 
-  - name: Install pip docker
-    command: pip install docker-py
+ #  - name: Install pip docker
+ #    command: pip install docker-py
 
-  - name: Install docker.io
-    command: yum install docker -y
-
+ #  - name: Install docker.io
+ #    command: yum install docker -y
+    
   - name: Docker pull image
     command: docker pull insta7120/monetizo_image:v1.0
+
+  - name: Docker run Container
+    command: docker run -d --name=monetizo -p 8081:8080 insta7120/monetizo_image:v1.0
