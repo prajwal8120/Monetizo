@@ -51,9 +51,12 @@ pipeline {
         }
     }
 
-        post {
-        success {
-            emailext body: 'A Test EMail', recipientProviders: [[$class: 'prajwal8120@gmail.com'], [$class: 'prajwal8120@gmail.com']], subject: 'Test'
-            }
+        post{
+        always{
+            emailext to: "naprajwal8120@gmail.com",
+            subject: "Test Email",
+            body: "Test",
+            attachLog: true
         }
     }
+}
