@@ -49,6 +49,7 @@ pipeline {
                 echo "Playbook Executed Successfully"
             }
         }
+    }
 
         post {
         always {
@@ -56,4 +57,3 @@ pipeline {
             }
         }
     }
-}
