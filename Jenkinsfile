@@ -26,5 +26,11 @@ pipeline {
                 }
             }
         }
+
+        stage ("Docker Build Image") {
+            steps {
+                sh 'docker build -t insta7120/Monetizo_image:v1.0 .'
+            }
+        }
     }
 }
