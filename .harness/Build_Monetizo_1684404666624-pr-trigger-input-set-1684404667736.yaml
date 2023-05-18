@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Monetizo_1684404666624-pr-trigger-input-set
+  identifier: Build_Monetizo_1684404666624prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_Monetizo_1684404666624
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
