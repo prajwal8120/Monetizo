@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Monetizo_1684938663704-push-trigger-input-set
+  identifier: Build_Monetizo_1684938663704pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: CIjava
+  pipeline:
+    identifier: Build_Monetizo_1684938663704
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
