@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Monetizo_1684938663704-pr-trigger-input-set
+  identifier: Build_Monetizo_1684938663704prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: CIjava
+  pipeline:
+    identifier: Build_Monetizo_1684938663704
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
