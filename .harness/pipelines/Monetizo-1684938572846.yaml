@@ -18,6 +18,13 @@ pipeline:
           execution:
             steps:
               - step:
+                  type: Run
+                  name: maven build
+                  identifier: maven_build
+                  spec:
+                    shell: Sh
+                    command: mvn clean package
+              - step:
                   type: BuildAndPushDockerRegistry
                   name: BuildAndPushDockerRegistry_1
                   identifier: BuildAndPushDockerRegistry_1
