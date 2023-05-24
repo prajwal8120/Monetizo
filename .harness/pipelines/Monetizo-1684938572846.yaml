@@ -17,13 +17,21 @@ pipeline:
           cloneCodebase: true
           execution:
             steps:
-              - step:
-                  type: Run
-                  name: maven build
-                  identifier: maven_build
-                  spec:
-                    shell: Sh
-                    command: mvn clean package
+              - parallel:
+                  - step:
+                      type: Run
+                      name: maven build
+                      identifier: maven_build
+                      spec:
+                        shell: Sh
+                        command: mvn clean package
+                  - step:
+                      type: Run
+                      name: PWD
+                      identifier: PWD
+                      spec:
+                        shell: Sh
+                        command: pwd
               - step:
                   type: BuildAndPushDockerRegistry
                   name: BuildAndPushDockerRegistry_1
